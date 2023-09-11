@@ -1,9 +1,9 @@
 .nr3{
     width: 100%;
     height: 50vw;
-    /* background-image: url(../svg/by.svg); */
-    background-color: rgb(0, 255, 0);
+    background-color: rgb(0, 255, 0); 
     margin: 0;
+    position: relative;
 }
 .seasonNav{
 display: grid;
@@ -24,3 +24,47 @@ grid-template-columns: repeat(4,1fr);
     background-color: #fff;
     border-bottom: none;
 }
+
+#forår{
+    background-image: url(../svg/by.svg);
+    background-size: cover;
+    aspect-ratio: 1920/1080;
+    position: absolute;
+    width: 100vw;
+}
+#sommer{
+    background-image: url(../svg/by.svg);
+    background-size: cover;
+    aspect-ratio: 1920/1080;
+    position: absolute;
+    width: 100vw;
+}
+#vinter{
+    background-image: url(../svg/by.svg);
+    background-size: cover;
+    aspect-ratio: 1920/1080;
+    position: absolute;
+    width: 100vw;
+}
+#efterår{
+    background-image: url(../svg/by.svg);
+    background-size: cover;
+    aspect-ratio: 1920/1080;
+    position: absolute;
+    width: 100vw;
+}
+#forår h2, #efterår h2, #sommer h2, #vinter h2{
+    text-align: center;
+}
+
+.displayNone{
+    display: none;
+}
+
+.forår_billede1{
+    position: absolute;
+    max-width: 5vw;
+}
+
+
+
