@@ -9,22 +9,29 @@ body{
     margin: 0;
 }
 
+header{
+position: relative;
+}
 
-nav{
+#headerNav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: rgb(89, 172, 66);
     text-align: center;
-    
     /* border-style: solid; */
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
 }
 
-img{
+#logo img{
     width: 50%;
     height: auto;
     scale: 1.5;
     transform: top(25px);
     transform-origin: 35% 0%;
+    z-index: 1;
 }
 
 
