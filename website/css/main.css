@@ -21,9 +21,10 @@ position: relative;
     text-align: center;
     /* border-style: solid; */
     position: absolute;
-    z-index: 1;
+    /* z-index: 1; */
     top: 0;
     left: 0;
+    border-bottom: solid rgb(83, 52, 19) 4px;
 }
 
 #logo img{
@@ -40,8 +41,9 @@ nav a{
     text-decoration: none;
     color: rgb(83, 52, 19);
     align-self: center;
-    text-align: center;
-    font-size: 50px;
+    text-align:center;
+    font-size: 3.5vw;
+    /* font-size: 50px; */
     font-family: Bubble;
     box-shadow: 1.5px 2px 1.5px 2px;
     /* border-style: solid; 
@@ -55,8 +57,8 @@ nav a{
 nav a:hover{
     color: orange;
     animation-name: pulse;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-out;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
     animation-direction: alternate;
     animation-iteration-count: infinite;
     animation-play-state: running;
@@ -64,10 +66,10 @@ nav a:hover{
 }
 @keyframes pulse{
     from{
-        scale: 1;
+        scale: 100%;
     }
     to{
-        scale: 1.1;
+        scale: 105%;
     }
 }
 
