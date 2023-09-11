@@ -5,6 +5,7 @@
     /* background-color: red; */
     margin: 0;
     position: relative;
+    overflow: hidden;
 }
 
 #background{
@@ -28,4 +29,31 @@
     aspect-ratio: 1920/1080;
     width: 100vw;
     position: absolute;
+}
+
+
+/* ----------------ANIMATIONER------------------- */
+
+
+.navAnim{
+    animation-name: navAnim;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes navAnim{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.midGrndAnim{
+    animation-name: midGrndAnim;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
 }
