@@ -15,16 +15,18 @@ nav{
     grid-template-columns: 1fr 1fr 1fr;
     background-color: rgb(89, 172, 66);
     text-align: center;
-    
     /* border-style: solid; */
+    position: relative;
+    z-index: 1;
 }
 
-img{
+#logo img{
     width: 50%;
     height: auto;
     scale: 1.5;
     transform: top(25px);
     transform-origin: 35% 0%;
+    z-index: 1;
 }
 
 
