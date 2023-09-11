@@ -16,6 +16,7 @@ position: relative;
 #headerNav{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    /* background-color: rgb(205, 226, 121); */
     background-color: rgb(89, 172, 66);
     text-align: center;
     /* border-style: solid; */

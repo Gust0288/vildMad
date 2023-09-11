@@ -29,6 +29,7 @@
     aspect-ratio: 1920/1080;
     width: 100vw;
     position: absolute;
+    top:-10%;
 }
 
 
@@ -37,23 +38,54 @@
 
 .navAnim{
     animation-name: navAnim;
-    animation-duration: 0.8s;
+    animation-duration: 1.7s;
     animation-iteration-count: 1;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: cubic-bezier(.17,.67,.98,1.13);
 }
 
 @keyframes navAnim{
     0%{
-        transform: translateY(-100%);
+        transform: translateY(-145%);
+        filter: opacity(0);
+    }
+    70%{
+        transform: translateY(-145%);
+        filter: opacity(0);
+    }
+    100%{
+        transform: translateY(0%);
+        filter: opacity(1);
+    }
+}
+
+.midGrndAnim{
+    animation-name: midGrndAnim;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes midGrndAnim{
+    0%{
+        transform: translateY(10%);
     }
     100%{
         transform: translateY(0%);
     }
 }
 
-.midGrndAnim{
-    animation-name: midGrndAnim;
-    animation-duration: 0.8s;
+.forGrndAnim{
+    animation-name: forGrndAnim;
+    animation-duration: 1.5s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
+}
+
+@keyframes forGrndAnim{
+    0%{
+        transform: translateY(25%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
 }
