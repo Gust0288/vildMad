@@ -25,7 +25,14 @@ grid-template-columns: repeat(4,1fr);
     border-bottom: none;
 }
 
+.classGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 330px));
+    gap: 4rem;
+}
+
 #forår{
+    position: relative;
     background-image: url(../svg/by.svg);
     background-size: cover;
     aspect-ratio: 1920/1080;
@@ -55,16 +62,82 @@ grid-template-columns: repeat(4,1fr);
 }
 #forår h2, #efterår h2, #sommer h2, #vinter h2{
     text-align: center;
+    grid-row: 1;
 }
 
 .displayNone{
     display: none;
 }
+.seasonDiv{
+    margin: 20px;
+    border-style: solid;
+    
+}
+.tempText{
+    padding-left: 3px;
+}
+.seasonDiv img{
+    width: 100%;
+    height: auto;
+}
 
-.forår_billede1{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* død ide--------------------- */
+/* .trans{
+    animation-name: toggleAni;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+}
+@keyframes toggleAni{
+    from{
+        filter: opacity(0);
+    }
+    to{
+        filter: opacity(1);
+    }
+} */
+/* #forår_billede1 img{
     position: absolute;
     max-width: 5vw;
+    left: 14%;
 }
+#forår_billede2 img{
+    position: absolute;
+    max-width: 5vw;
+    left: 20%;
+    bottom: 20%;
+}
+#forår_billede3 img{
+    position: absolute;
+    max-width: 5vw;
+    left: 65%;
+    bottom: 52%;
+    
+}
+#forår_info1{
+    width: 300px;
+    height: 100px;
+    border-radius: 15px;
+    background-color: rgb(98, 99, 15);
+    position: absolute;
+    left: 20%;
+    bottom: 77%;
+    padding-left: 5px;
+    
+} */
 
 
 

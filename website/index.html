@@ -13,16 +13,13 @@
   <body>
     <header>
       <section class="nr1">
-        <div id="background">
-        </div>
-        <div id="middleground">
-        </div>
-        <div id="foreground">
-        </div>
+        <div id="background"></div>
+        <div id="middleground"></div>
+        <div id="foreground"></div>
       </section>
       <nav id="headerNav">
         <a id="nav_nemt" href="index.html#nr2">Nemt af finde</a>
-        <div id="logo"><img src="svg/Logo.svg" alt=""></div>
+        <div id="logo"><img src="svg/Logo.svg" alt="" /></div>
         <a id="nav_sæsoner" href=".nr3">Sæsoner</a>
       </nav>
     </header>
@@ -62,36 +59,60 @@
           <button id="efterårBtn">Efterår</button>
           <button id="vinterBtn">Vinter</button>
         </nav>
-        <article id="forår">
-          <h2>Forår</h2>
-          <div  id="forår1">
-            <div id="forår_billede1"><img src="svg/375196912_144365285406059_7242225427921348229_n.png" alt=""></div>
+        <article class="classGrid" id="forår">
+          <template class="seasonTemp">
+            <div class="seasonDiv">
+              <img class="imgTemp" src="" alt="" />
+              <div class="tempText">
+                <h3 class="flowerName"></h3>
+                <p class="descriptionSeason"></p>
+                <p class="categorySeason"></p>
+                <p class="season1"></p>
+              </div>
+            </div>
+          </template>
+          <!-- <div id="forår1">
+            <div id="forår_billede1">
+              <img
+                src="svg/375196912_144365285406059_7242225427921348229_n.png"
+                alt=""
+              />
+            </div>
             <div id="forår_info1">
               <h3>Information</h3>
               <p></p>
               <p></p>
             </div>
           </div>
-          <div  id="forår2">
-            <div id="forår_billede1"></div>
+          <div id="forår2">
+            <div id="forår_billede2">
+              <img
+                src="svg/375196912_144365285406059_7242225427921348229_n.png"
+                alt=""
+              />
+            </div>
             <div id="forår_info2">
               <h3>Information</h3>
               <p></p>
               <p></p>
             </div>
           </div>
-          <div  id="forår3">
-            <div id="forår_billede1"></div>
+          <div id="forår3">
+            <div id="forår_billede3">
+              <img
+                src="svg/375196912_144365285406059_7242225427921348229_n.png"
+                alt=""
+              />
+            </div>
             <div id="forår_info3">
               <h3>Information</h3>
               <p></p>
               <p></p>
             </div>
-          </div>
+          </div> -->
         </article>
-        <article id="sommer">
-          <h2>Sommer</h2>
-          <div id="sommer1">
+        <article class="classGrid" id="sommer">
+          <!-- <div id="sommer1">
             <div id="sommer_billede1"></div>
             <div id="sommer_info1">
               <h3>Information</h3>
@@ -114,11 +135,10 @@
               <p></p>
               <p></p>
             </div>
-          </div>
+          </div> -->
         </article>
-        <article id="efterår">
-          <h2>Efterår</h2>
-          <div id="efterår1">
+        <article class="classGrid" id="efterår">
+          <!-- <div id="efterår1">
             <div id="efterår_billede1"></div>
             <div id="efterår_info1">
               <h3>Information</h3>
@@ -141,11 +161,10 @@
               <p></p>
               <p></p>
             </div>
-          </div>
+          </div> -->
         </article>
-        <article id="vinter">
-          <h2>Vinter</h2>
-          <div id="vinter1">
+        <article class="classGrid" id="vinter">
+          <!-- <div id="vinter1">
             <div id="vinter_billede1"></div>
             <div id="vinter_info1">
               <h3>Information</h3>
@@ -168,7 +187,7 @@
               <p></p>
               <p></p>
             </div>
-          </div>
+          </div> -->
         </article>
       </section>
     </main>
