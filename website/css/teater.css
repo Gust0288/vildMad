@@ -22,6 +22,7 @@
     aspect-ratio: 1920/1080;
     width: 100vw;
     position: absolute;
+    top: 0;
 }
 
 #foreground{
@@ -87,5 +88,20 @@
     }
     100%{
         transform: translateY(0%);
+    }
+}
+
+@media (max-width: 450px){
+    #foreground{
+        top: 5%;
+    }
+
+    #foreground, #middleground, #background{
+        max-width: 100vw;
+    }
+
+    .nr1{
+        max-height: 34vh;
+        background-color: red;
     }
 }
