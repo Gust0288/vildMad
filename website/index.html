@@ -1,77 +1,102 @@
 <!DOCTYPE html>
 <html lang="da">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/teater.css" />
-    <link rel="stylesheet" href="css/nemtAtFinde.css" />
-    <link rel="stylesheet" href="css/hvadErSanke.css" />
-    <link rel="stylesheet" href="css/seasons.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <title>Start</title>
-  </head>
-  <body>
-    <header>
-      <section class="nr1">
-        <div id="background"></div>
-        <div id="middleground"></div>
-        <div id="foreground"></div>
-      </section>
-      <nav id="headerNav">
-        <a id="nav_nemt" href="index.html#nr2">Nemt af finde</a>
-        <div id="logo"><img src="svg/Logo.svg" alt="" /></div>
-        <a id="nav_sæsoner" href=".nr3">Sæsoner</a>
-      </nav>
-    </header>
-    <main>
-      <section class="nr2">
-        <article class="whatIs">
-          <h2>Hvad er Sanke?</h2>
-          <div class="kugle"></div>
-          <div class="streg"></div>
-          <div class="kugle"></div>
-          <div class="streg"></div>
-          <div class="kugle"></div>
-          <div class="streg"></div>
-          <div id="info1"></div>
-          <div id="info2"></div>
-          <div id="info3"></div>
-          <div id="info4"></div>
-          <div id="info5"></div>
-          <div id="info6"></div>
-        </article>
-        <article class="nemtAtFinde">
-          <h2>Nemt at finde</h2>
-          <template id="nemtAtFindeTemplate">
-            <article class="articleFinde">
-              <img src="" alt="" />
-              <h3></h3>
-              <p></p>
-              <p></p>
-            </article>
-          </template>
-        </article>
-      </section>
-      <section class="nr3">
-        <nav class="seasonNav">
-          <button id="forårBtn">Forår</button>
-          <button id="sommerBtn">Sommer</button>
-          <button id="efterårBtn">Efterår</button>
-          <button id="vinterBtn">Vinter</button>
-        </nav>
-        <article class="classGrid" id="forår">
-          <template class="seasonTemp">
-            <div class="seasonDiv">
-              <img class="imgTemp" src="" alt="" />
-              <div class="tempText">
-                <h3 class="flowerName"></h3>
-                <p class="categorySeason"></p>
-                <p class="descriptionSeason"></p>
-                <p class="season1"></p>
-              </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/teater.css" />
+  <link rel="stylesheet" href="css/nemtAtFinde.css" />
+  <link rel="stylesheet" href="css/hvadErSanke.css" />
+  <link rel="stylesheet" href="css/seasons.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <title>Start</title>
+</head>
+
+<body>
+  <header>
+    <section class="nr1">
+      <div id="background"></div>
+      <div id="middleground"></div>
+      <div id="foreground"></div>
+    </section>
+    <nav id="headerNav">
+      <a id="nav_nemt" href="index.html#nr2">Nemt af finde</a>
+      <div id="logo"><img src="svg/Logo.svg" alt="" /></div>
+      <a id="nav_sæsoner" href=".nr3">Sæsoner</a>
+    </nav>
+  </header>
+  <main>
+    <section id="nr2">
+
+      <article class="HTF">
+
+        <h2 class="h2HTF">Hvad er Sanke & sankelandskaber?</h2>
+        <div class="string"></div>
+        <div class="string"></div>
+        <div class="string"></div>
+        <div class="string"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+
+        <div class="speechBubble sbAfter">
+          <p></p>
+        </div>
+        <div class="speechBubble sbAfter">
+          <p></p>
+        </div>
+        <div class="speechBubble sbAfter">
+          <p></p>
+        </div>
+        <div class="speechBubble sbAfter">
+          <p></p>
+        </div>
+        <div class="speechBubble sbAfter">
+          <p></p>
+        </div>
+      </article>
+
+
+      <article class="ETF">
+        <h2 class="h2ETF">Nemt at finde</h2>
+        <h3 class="h3Season">S</h3>
+
+        <template id="nemtAtFindeTemplate">
+          <div class="cEFT">
+            <img class="imgEFT" src="" alt="" />
+            <div class="tEFT">
+              <h3 class="name"></h3>
+              <h5 class="category"></h5>
+              <!-- husk at tilføje Landscape i cat-->
+              <p class="season"></p>
+              <p class="description"></p>
             </div>
-          </template>
-          <!-- <div id="forår1">
+          </div>
+        </template>
+      </article>
+    </section>
+    <section class="nr3">
+      <nav class="seasonNav">
+        <button id="forårBtn">Forår</button>
+        <button id="sommerBtn">Sommer</button>
+        <button id="efterårBtn">Efterår</button>
+        <button id="vinterBtn">Vinter</button>
+      </nav>
+      <article class="classGrid" id="forår">
+        <template class="seasonTemp">
+          <div class="seasonDiv">
+            <img class="imgTemp" src="" alt="" />
+            <div class="tempText">
+              <h3 class="flowerName"></h3>
+              <p class="categorySeason"></p>
+              <p class="descriptionSeason"></p>
+              <p class="season1"></p>
+            </div>
+          </div>
+        </template>
+        <!-- <div id="forår1">
             <div id="forår_billede1">
               <img
                 src="svg/375196912_144365285406059_7242225427921348229_n.png"
@@ -110,9 +135,9 @@
               <p></p>
             </div>
           </div> -->
-        </article>
-        <article class="classGrid" id="sommer">
-          <!-- <div id="sommer1">
+      </article>
+      <article class="classGrid" id="sommer">
+        <!-- <div id="sommer1">
             <div id="sommer_billede1"></div>
             <div id="sommer_info1">
               <h3>Information</h3>
@@ -136,9 +161,9 @@
               <p></p>
             </div>
           </div> -->
-        </article>
-        <article class="classGrid" id="efterår">
-          <!-- <div id="efterår1">
+      </article>
+      <article class="classGrid" id="efterår">
+        <!-- <div id="efterår1">
             <div id="efterår_billede1"></div>
             <div id="efterår_info1">
               <h3>Information</h3>
@@ -162,9 +187,9 @@
               <p></p>
             </div>
           </div> -->
-        </article>
-        <article class="classGrid" id="vinter">
-          <!-- <div id="vinter1">
+      </article>
+      <article class="classGrid" id="vinter">
+        <!-- <div id="vinter1">
             <div id="vinter_billede1"></div>
             <div id="vinter_info1">
               <h3>Information</h3>
@@ -188,12 +213,13 @@
               <p></p>
             </div>
           </div> -->
-        </article>
-      </section>
-    </main>
-    <footer></footer>
-    <script src="js/introAnim.js"></script>
-    <script src="js/seasons.js"></script>
-    <script src="js/nemtAtFinde.js"></script>
-  </body>
+      </article>
+    </section>
+  </main>
+  <footer></footer>
+  <script src="js/introAnim.js"></script>
+  <script src="js/seasons.js"></script>
+  <script src="js/nemtAtFinde.js"></script>
+</body>
+
 </html>

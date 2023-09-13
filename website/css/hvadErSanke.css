@@ -1,9 +1,142 @@
-.whatIs{
-    width: 100%;
-    height: 50vw;
-    /* background-image: url(../svg/by.svg); */
-    background-color: rgb(0, 94, 255);
-    margin: 0;
-
+#nr2 {
+  width: 100%;
+  height: auto;
+  /* overflow: hidden; */
+  background-color: aqua;
 }
 
+.HTF {
+  background-color: rgb(187, 201, 165);
+  width: 100%;
+  height: 800px;
+  padding: 40px 0 0 0;
+  position: relative;
+}
+
+.h2HTF {
+  text-align: center;
+  margin: 0 0 0 0;
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(2, 59, 19);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.ball:nth-child(6),
+.ball:nth-child(8),
+.ball:nth-child(10) {
+  left: 85px;
+}
+
+.ball:nth-child(6) {
+  top: 16.6%;
+}
+
+.ball:nth-child(8) {
+  top: 49.2%;
+}
+
+.ball:nth-child(10) {
+  top: 81.8%;
+}
+
+.ball:nth-child(7),
+.ball:nth-child(9) {
+  left: 176px;
+}
+
+.ball:nth-child(7) {
+  top: 33.2%;
+}
+
+.ball:nth-child(9) {
+  top: 65.2%;
+}
+
+.string {
+  width: 4px;
+  height: 150px;
+  background-color: rgb(103, 69, 12);
+  position: absolute;
+}
+
+.string:nth-child(2),
+.string:nth-child(4) {
+  rotate: -34deg;
+  left: 140px;
+}
+
+.string:nth-child(2) {
+  top: 17%;
+}
+
+.string:nth-child(4) {
+  top: 49%;
+}
+
+.string:nth-child(3),
+.string:nth-child(5) {
+  rotate: 34deg;
+  left: 140px;
+}
+
+.string:nth-child(3) {
+  top: 33%;
+}
+
+.string:nth-child(5) {
+  top: 65%;
+}
+
+.speechBubble {
+  width: 300px;
+  height: 100px;
+  border-radius: 15px;
+  background-color: rgb(60, 60, 200);
+  position: absolute;
+  /* left: 200px;
+  top: 17%; */
+}
+
+.sbAfter::before {
+  content: "";
+  width: 0;
+  height: 0;
+  margin: 50px auto;
+  position: absolute;
+  border-left: 15px solid transparent;
+  border-right: 15px solid rgb(60, 60, 200);
+  border-top: 15px solid rgb(60, 60, 200);
+  border-bottom: 15px solid transparent;
+  left: -16px;
+  top: -50%;
+}
+
+.speechBubble:nth-child(11) {
+  left: 200px;
+  top: 18%;
+}
+
+.speechBubble:nth-child(12) {
+  left: 300px;
+  top: 35%;
+}
+
+.speechBubble:nth-child(13) {
+  left: 200px;
+  top: 51%;
+}
+
+.speechBubble:nth-child(14) {
+  left: 300px;
+  top: 67%;
+}
+
+.speechBubble:nth-child(15) {
+  left: 200px;
+  top: 83%;
+}
