@@ -28,7 +28,7 @@ function altInfo (items){
     // Grapping---------
     const seasonTemp = document.querySelector(".seasonTemp").content;
     
-//    looping and adding content
+//    looping and adding content to elements in template, and appending to selected parent
     if(items.season.includes("spring")){
         console.log("spring");
         const klon = seasonTemp.cloneNode(true);
@@ -70,8 +70,9 @@ function altInfo (items){
 
 
 }
-
 // -------------Fetching-----------------------------<<<<
+
+
 const forårBtn = document.querySelector("#forårBtn");
 const efterårBtn = document.querySelector("#efterårBtn");
 const sommerBtn = document.querySelector("#sommerBtn");
@@ -98,7 +99,7 @@ function buttonForår() {
     efterår.classList.add("displayNone"); 
 
 
-     // click function line
+     // click function line-under-remove
     forårBtn.classList.add("clickNav");
     efterårBtn.classList.remove("clickNav");
     vinterBtn.classList.remove("clickNav");
@@ -111,7 +112,7 @@ function buttonSommer() {
     vinter.classList.add("displayNone");
     efterår.classList.add("displayNone");
 
-    // click function line
+     // click function line-under-remove
     forårBtn.classList.remove("clickNav");
     efterårBtn.classList.remove("clickNav");
     vinterBtn.classList.remove("clickNav");
@@ -124,7 +125,7 @@ function buttonEfterår() {
     sommer.classList.add("displayNone");
     vinter.classList.add("displayNone");
 
-     // click function line
+     // click function line-under-remove
     forårBtn.classList.remove("clickNav");
     efterårBtn.classList.add("clickNav");
     vinterBtn.classList.remove("clickNav");
@@ -137,41 +138,12 @@ function buttonVinter() {
     forår.classList.add("displayNone");
     sommer.classList.add("displayNone");
 
-     // click function line
-     forårBtn.classList.remove("clickNav");
-     efterårBtn.classList.remove("clickNav");
-     vinterBtn.classList.add("clickNav");
-     sommerBtn.classList.remove("clickNav");
+    // click function line-under-remove
+    forårBtn.classList.remove("clickNav");
+    efterårBtn.classList.remove("clickNav");
+    vinterBtn.classList.add("clickNav");
+    sommerBtn.classList.remove("clickNav");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // død ide--------------------------------------
