@@ -3,8 +3,6 @@
   height: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  background-color: rgb(187, 201, 165);
-  border: 1px solid black;
   padding: 0 0 40px;
   place-items: center;
   gap: 40px;
@@ -26,6 +24,11 @@
   width: 300px;
   background-color: aquamarine;
   border-radius: 25px;
+  border: solid rgb(179, 116, 48) 4px;
+  /* border-radius: 3vw; */
+  background-color: rgba(255, 207, 103, 0.744);
+  backdrop-filter: blur(3px);
+  box-shadow: rgb(179, 116, 48) 4px 4px;
 }
 
 .imgEFT {
