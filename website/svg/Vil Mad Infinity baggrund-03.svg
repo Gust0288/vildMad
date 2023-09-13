@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #75472e;
+      }
+
+      .cls-3 {
+        fill: #7acfdd;
+      }
+    </style>
+  </defs>
+  <rect class="cls-3" width="1920" height="1080"/>
+  <g>
+    <rect class="cls-2" x="-131" width="264" height="1080"/>
+    <rect class="cls-2" x="161.43" y="639.56" width="21" height="182.5" transform="translate(-566.17 868.07) rotate(-87.3)"/>
+    <rect class="cls-2" x="233.92" y="713.5" width="13.39" height="116.32" transform="translate(-440.19 335.93) rotate(-40.06)"/>
+  </g>
+  <g>
+    <rect class="cls-2" x="1788" width="264" height="1080"/>
+    <ellipse class="cls-1" cx="1875" cy="802.5" rx="46" ry="86.5"/>
+  </g>
+  <rect class="cls-3" width="1920" height="1080"/>
+  <g>
+    <rect class="cls-2" x="-131" width="264" height="1080"/>
+    <rect class="cls-2" x="161.43" y="639.56" width="21" height="182.5" transform="translate(-566.17 868.07) rotate(-87.3)"/>
+    <rect class="cls-2" x="233.92" y="713.5" width="13.39" height="116.32" transform="translate(-440.19 335.93) rotate(-40.06)"/>
+  </g>
+  <g>
+    <rect class="cls-2" x="1788" width="264" height="1080"/>
+    <ellipse class="cls-1" cx="1875" cy="802.5" rx="46" ry="86.5"/>
+  </g>
+</svg>
