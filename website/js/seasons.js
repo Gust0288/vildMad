@@ -20,65 +20,58 @@ fetch("https://dsokyrsukcwokvaqfpmr.supabase.co/rest/v1/vildmad_data", {
 
 function showData(item){
     item.forEach(altInfo);
-
-   
-
-
 }   
 
 function altInfo (items){
-    console.log(items);
-
+    console.log(items.season);
+    
     // Grapping---------
     const seasonTemp = document.querySelector(".seasonTemp").content;
-
-    // Cloning---------
-    const copyseasonForår = seasonTemp.cloneNode(true); 
-    const copyseasonSommer = seasonTemp.cloneNode(true); 
-    const copyseasonEfterår = seasonTemp.cloneNode(true); 
-    const copyseasonVinter = seasonTemp.cloneNode(true); 
-
-    // Adding---------
-    if(items.season.includes("spring")){
-        copyseasonForår.querySelector(".imgTemp").src = items.image;
-        copyseasonForår.querySelector(".flowerName").textContent = "Navn: " + items.name;
-        copyseasonForår.querySelector(".categorySeason").textContent = "Category: " + items.category;
-        copyseasonForår.querySelector(".descriptionSeason").textContent = "Description " + items.description;
-    }
-    if(items.season.includes("summer")){
-        copyseasonSommer.querySelector(".imgTemp").src = items.image;
-        copyseasonSommer.querySelector(".flowerName").textContent = "Navn: " + items.name;
-        copyseasonSommer.querySelector(".categorySeason").textContent = "Category: " + items.category;
-        copyseasonSommer.querySelector(".descriptionSeason").textContent = "Description " + items.description;
-    }
-    if(items.season.includes("fall")){
-        copyseasonEfterår.querySelector(".imgTemp").src = items.image;
-        copyseasonEfterår.querySelector(".flowerName").textContent = "Navn: " + items.name;
-        copyseasonEfterår.querySelector(".categorySeason").textContent = "Category: " + items.category;
-        copyseasonEfterår.querySelector(".descriptionSeason").textContent = "Description " + items.description;
-    }
-    if(items.season.includes("winter")){
-        copyseasonVinter.querySelector(".imgTemp").src = items.image;
-        copyseasonVinter.querySelector(".flowerName").textContent = "Navn: " + items.name;
-        copyseasonVinter.querySelector(".categorySeason").textContent = "Category: " + items.category;
-        copyseasonVinter.querySelector(".descriptionSeason").textContent = "Description " + items.description;
-        
-    }
     
-    // Appending---------
-    document.querySelector("#forår").appendChild(copyseasonForår);
-    document.querySelector("#sommer").appendChild(copyseasonSommer);
-    document.querySelector("#efterår").appendChild(copyseasonEfterår);
-    document.querySelector("#vinter").appendChild(copyseasonVinter);
+//    looping and adding content
+    if(items.season.includes("spring")){
+        console.log("spring");
+        const klon = seasonTemp.cloneNode(true);
+        klon.querySelector(".imgTemp").src = items.image;
+        klon.querySelector(".flowerName").textContent = "Navn: " + items.name;
+        klon.querySelector(".categorySeason").textContent = "Category: " + items.category;
+        klon.querySelector(".descriptionSeason").textContent = "Description " + items.description;
+        klon.querySelector(".season1").textContent = "Seasons " + items.season;
+
+        document.querySelector("#forår").appendChild(klon);
+    } if(items.season.includes("summer")){
+        console.log("summer");
+        const klon = seasonTemp.cloneNode(true);
+        klon.querySelector(".imgTemp").src = items.image;
+        klon.querySelector(".flowerName").textContent = "Navn: " + items.name;
+        klon.querySelector(".categorySeason").textContent = "Category: " + items.category;
+        klon.querySelector(".descriptionSeason").textContent = "Description " + items.description;
+        klon.querySelector(".season1").textContent = "Seasons " + items.season;
+        document.querySelector("#sommer").appendChild(klon);
+    } if(items.season.includes("fall")){
+        console.log("fall");
+        const klon = seasonTemp.cloneNode(true);
+        klon.querySelector(".imgTemp").src = items.image;
+        klon.querySelector(".flowerName").textContent = "Navn: " + items.name;
+        klon.querySelector(".categorySeason").textContent = "Category: " + items.category;
+        klon.querySelector(".descriptionSeason").textContent = "Description " + items.description;
+        klon.querySelector(".season1").textContent = "Seasons " + items.season;
+        document.querySelector("#efterår").appendChild(klon);
+    }if(items.season.includes("winter")){
+        console.log("vinter");
+        const klon = seasonTemp.cloneNode(true);
+        klon.querySelector(".imgTemp").src = items.image;
+        klon.querySelector(".flowerName").textContent = "Navn: " + items.name;
+        klon.querySelector(".categorySeason").textContent = "Category: " + items.category;
+        klon.querySelector(".descriptionSeason").textContent = "Description " + items.description;
+        klon.querySelector(".season1").textContent = "Seasons " + items.season;
+        document.querySelector("#vinter").appendChild(klon);
+    }
 
 
 }
 
 // -------------Fetching-----------------------------<<<<
-
-
-
-
 const forårBtn = document.querySelector("#forårBtn");
 const efterårBtn = document.querySelector("#efterårBtn");
 const sommerBtn = document.querySelector("#sommerBtn");
@@ -103,6 +96,13 @@ function buttonForår() {
     sommer.classList.add("displayNone");
     vinter.classList.add("displayNone");
     efterår.classList.add("displayNone"); 
+
+
+     // click function line
+    forårBtn.classList.add("clickNav");
+    efterårBtn.classList.remove("clickNav");
+    vinterBtn.classList.remove("clickNav");
+    sommerBtn.classList.remove("clickNav");
 }
 function buttonSommer() {
     console.log("sommer")
@@ -110,6 +110,12 @@ function buttonSommer() {
     forår.classList.add("displayNone");
     vinter.classList.add("displayNone");
     efterår.classList.add("displayNone");
+
+    // click function line
+    forårBtn.classList.remove("clickNav");
+    efterårBtn.classList.remove("clickNav");
+    vinterBtn.classList.remove("clickNav");
+    sommerBtn.classList.add("clickNav");
 }
 function buttonEfterår() {
     console.log("efterår")
@@ -117,6 +123,12 @@ function buttonEfterår() {
     forår.classList.add("displayNone");
     sommer.classList.add("displayNone");
     vinter.classList.add("displayNone");
+
+     // click function line
+    forårBtn.classList.remove("clickNav");
+    efterårBtn.classList.add("clickNav");
+    vinterBtn.classList.remove("clickNav");
+    sommerBtn.classList.remove("clickNav");
 }
 function buttonVinter() {
     console.log("vinter")
@@ -124,6 +136,12 @@ function buttonVinter() {
     efterår.classList.add("displayNone");
     forår.classList.add("displayNone");
     sommer.classList.add("displayNone");
+
+     // click function line
+     forårBtn.classList.remove("clickNav");
+     efterårBtn.classList.remove("clickNav");
+     vinterBtn.classList.add("clickNav");
+     sommerBtn.classList.remove("clickNav");
 }
 
 
