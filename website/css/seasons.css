@@ -4,33 +4,46 @@
     background-color: rgb(0, 255, 0); 
     margin: 0;
     position: relative;
-    background-image: url(../svg/Vil\ Mad\ Infinity\ baggrund-01.svg), url(../svg/Vil\ Mad\ Infinity\ baggrund-02.svg);
+    background-image: url(../svg/Vil\ Mad\ Infinity\ baggrund-01.svg);
     background-size: cover;
-    background-position: right bottom, left top;
-    background-repeat: no-repeat;
+    background-position: top, bottom;
+    /* background-repeat: no-repeat; */
     aspect-ratio: 1920/1080;
     /* position: absolute; */
     width: 100vw;
+    overflow-y: scroll;
+    /* enable overflow-y:scroll; efter man er fokuseret på .nr3 */
 }
+/* .nr3::after{
+    overflow-y: scroll;
+} */
+
 .seasonNav{
 display: grid;
 grid-template-columns: repeat(4,1fr);
+position: sticky;
+top: 0;
+z-index: 2;
+backdrop-filter: blur(5px);
 }
 .seasonNav *{
     transition: all .5s ease;
     padding: 15px;    
-    border-style: solid;
-    border-width: 2px;
-    border-color: black;
+    border: solid rgb(77, 86, 179) 4px;
+    border-bottom: solid rgb(77, 86, 179) 8px;
+    border-left: solid rgb(77, 86, 179) 2px;
+    border-right: solid rgb(77, 86, 179) 2px;
     /* background-color: transparent; */
-    background-color: blue;
+    background-color: rgb(107, 143, 221);
     text-transform: uppercase;
     outline: none;
+    font-family: Bubble;
+    font-size: 2.5vw;
+    color: rgb(48, 53, 115);
 }
 .seasonNav *:hover{
     color: #001F3F;
-    background-color: #fff;
-    border-bottom: none;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .classGrid{
@@ -76,16 +89,31 @@ grid-template-columns: repeat(4,1fr);
     grid-row: 1;
 }
 
-.displayNone{
+/* .displayNone{
     display: none;
-}
+} */
 .seasonDiv{
+    overflow: hidden;
     margin: 20px;
-    border-style: solid;
-    
+    border: solid rgb(179, 116, 48) 4px;
+    border-radius: 3vw;
+    background-color: rgba(255, 207, 103, 0.744);
+    backdrop-filter: blur(3px);
+    box-shadow: rgb(179, 116, 48) 4px 4px;
 }
 .tempText{
     padding-left: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 0.5vw;
+}
+.tempText h3{
+    margin-top: 0;
+    margin-bottom: 0.5vw;
+    font-family: Bubble;
+}
+.tempText p{
+    margin-top: 0;
+    margin-bottom: 0.5;
 }
 .seasonDiv img{
     width: 100%;
@@ -93,13 +121,49 @@ grid-template-columns: repeat(4,1fr);
 }
 .clickNav{
     border-bottom: none;
-    background-color: transparent;
-    
+    background-color: rgba(122, 207, 221, 0.5);    
+    text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 4px;
 }
 
 
+@media (max-width:450px){
+    .classGrid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .nr3{
+        height: 100vh;
+    }
+
+    .seasonDiv img{
+        /* max-width: 100%; */
+        max-height: 270px;
+    }
+
+    .seasonDiv{
+        height: 600px;
+        overflow: hidden;
+        margin: 6px;
+        border: solid rgb(179, 116, 48) 4px;
+        border-radius: 3vw;
+        background-color: rgba(255, 207, 103, 0.744);
+        backdrop-filter: blur(3px);
+        box-shadow: none;
+    }
+
+    .tempText{
+        padding-top: 150px;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 0.5vw;
+    }
+}
 
 
+.displayNone{
+    display: none;
+}
 
 
 
