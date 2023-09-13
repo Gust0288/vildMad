@@ -20,6 +20,7 @@ fetch("https://dsokyrsukcwokvaqfpmr.supabase.co/rest/v1/vildmad_data", {
 
 function showData(item){
     item.forEach(altInfo);
+    console.table(item)
 }   
 
 function altInfo (items){
@@ -35,37 +36,38 @@ function altInfo (items){
         console.log("spring");
         const klon = seasonTemp.cloneNode(true);
         klon.querySelector(".imgTemp").src = items.image;
-        klon.querySelector(".flowerName").textContent = "Navn: " + items.name;
-        klon.querySelector(".categorySeason").textContent = "Category: " + items.category;
-        klon.querySelector(".descriptionSeason").textContent = "Description " + items.description;
-        klon.querySelector(".season1").textContent = "Seasons " + items.season;
+        klon.querySelector(".flowerName").textContent = items.name;
+        klon.querySelector(".categorySeason").textContent = items.category + " | " + items.landscape;
+        klon.querySelector(".descriptionSeason").textContent = items.description;
+        klon.querySelector(".season1").textContent = "sæsoner: " + items.season;
+
         document.querySelector("#forår").appendChild(klon);
     } if(items.season.includes("summer")){
         console.log("summer");
         const klon = seasonTemp.cloneNode(true);
         klon.querySelector(".imgTemp").src = items.image;
-        klon.querySelector(".flowerName").textContent = "Navn: " + items.name;
-        klon.querySelector(".categorySeason").textContent = "Category: " + items.category;
-        klon.querySelector(".descriptionSeason").textContent = "Description " + items.description;
-        klon.querySelector(".season1").textContent = "Seasons " + items.season;
+        klon.querySelector(".flowerName").textContent = items.name;
+        klon.querySelector(".categorySeason").textContent = items.category + " | " + items.landscape;
+        klon.querySelector(".descriptionSeason").textContent = items.description;
+        klon.querySelector(".season1").textContent = "sæsoner: " + items.season;
         document.querySelector("#sommer").appendChild(klon);
     } if(items.season.includes("fall")){
         console.log("fall");
         const klon = seasonTemp.cloneNode(true);
         klon.querySelector(".imgTemp").src = items.image;
-        klon.querySelector(".flowerName").textContent = "Navn: " + items.name;
-        klon.querySelector(".categorySeason").textContent = "Category: " + items.category;
-        klon.querySelector(".descriptionSeason").textContent = "Description " + items.description;
-        klon.querySelector(".season1").textContent = "Seasons " + items.season;
+        klon.querySelector(".flowerName").textContent = items.name;
+        klon.querySelector(".categorySeason").textContent = items.category + " | " + items.landscape;
+        klon.querySelector(".descriptionSeason").textContent = items.description;
+        klon.querySelector(".season1").textContent = "sæsoner: " + items.season;
         document.querySelector("#efterår").appendChild(klon);
     }if(items.season.includes("winter")){
         console.log("vinter");
         const klon = seasonTemp.cloneNode(true);
         klon.querySelector(".imgTemp").src = items.image;
-        klon.querySelector(".flowerName").textContent = "Navn: " + items.name;
-        klon.querySelector(".categorySeason").textContent = "Category: " + items.category;
-        klon.querySelector(".descriptionSeason").textContent = "Description " + items.description;
-        klon.querySelector(".season1").textContent = "Seasons " + items.season;
+        klon.querySelector(".flowerName").textContent = items.name;
+        klon.querySelector(".categorySeason").textContent = items.category + " | " + items.landscape;
+        klon.querySelector(".descriptionSeason").textContent = items.description;
+        klon.querySelector(".season1").textContent = "sæsoner: " + items.season;
         document.querySelector("#vinter").appendChild(klon);
     }
     //    looping and adding content to elements in template, and appending to selected parent----<<<<<<<<
@@ -82,8 +84,7 @@ const vinterBtn = document.querySelector("#vinterBtn");
 
 // function that loads every time the page is loaded
 function start(){
-    //Adding classes displayNone that removes the element
-    
+    forårBtn.classList.add("clickNav");
     // forår.classList.add("displayNone");
     sommer.classList.add("displayNone");
     vinter.classList.add("displayNone");
