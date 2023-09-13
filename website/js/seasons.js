@@ -28,7 +28,9 @@ function altInfo (items){
     // Grapping---------
     const seasonTemp = document.querySelector(".seasonTemp").content;
     
-//    looping and adding content to elements in template, and appending to selected parent
+    //    looping and adding content to elements in template, and appending to selected parent.---->>>>>>
+    //    If statement that add the coresponding elements from the database to the the right season by using method Includes(). to see witch season is in the database array, then cloning a the template everytime to be able to take the information out, if this is not done you will not get the info from database becuase the info can only be taking out of copytemplate one time.
+
     if(items.season.includes("spring")){
         console.log("spring");
         const klon = seasonTemp.cloneNode(true);
@@ -37,7 +39,6 @@ function altInfo (items){
         klon.querySelector(".categorySeason").textContent = "Category: " + items.category;
         klon.querySelector(".descriptionSeason").textContent = "Description " + items.description;
         klon.querySelector(".season1").textContent = "Seasons " + items.season;
-
         document.querySelector("#forår").appendChild(klon);
     } if(items.season.includes("summer")){
         console.log("summer");
@@ -67,6 +68,7 @@ function altInfo (items){
         klon.querySelector(".season1").textContent = "Seasons " + items.season;
         document.querySelector("#vinter").appendChild(klon);
     }
+    //    looping and adding content to elements in template, and appending to selected parent----<<<<<<<<
 
 
 }
@@ -78,21 +80,27 @@ const efterårBtn = document.querySelector("#efterårBtn");
 const sommerBtn = document.querySelector("#sommerBtn");
 const vinterBtn = document.querySelector("#vinterBtn");
 
-
+// function that loads every time the page is loaded
 function start(){
+    //Adding classes displayNone that removes the element
+    
     // forår.classList.add("displayNone");
     sommer.classList.add("displayNone");
     vinter.classList.add("displayNone");
     efterår.classList.add("displayNone");
 }
+    // addting function to buttons
+    forårBtn.addEventListener("click",buttonForår);
+    sommerBtn.addEventListener("click",buttonSommer);
+    efterårBtn.addEventListener("click",buttonEfterår);
+    vinterBtn.addEventListener("click",buttonVinter);
 
-forårBtn.addEventListener("click",buttonForår);
-sommerBtn.addEventListener("click",buttonSommer);
-efterårBtn.addEventListener("click",buttonEfterår);
-vinterBtn.addEventListener("click",buttonVinter);
+
 // NAV ------------------
 function buttonForår() {
     console.log("forår")
+
+    // adding and removing displayNone class so one element is shown and the threes others are not
     forår.classList.remove("displayNone");
     sommer.classList.add("displayNone");
     vinter.classList.add("displayNone");
@@ -107,6 +115,8 @@ function buttonForår() {
 }
 function buttonSommer() {
     console.log("sommer")
+    
+    // adding and removing displayNone class so one element is shown and the threes others are not
     sommer.classList.remove("displayNone");
     forår.classList.add("displayNone");
     vinter.classList.add("displayNone");
@@ -120,6 +130,8 @@ function buttonSommer() {
 }
 function buttonEfterår() {
     console.log("efterår")
+
+    // adding and removing displayNone class so one element is shown and the threes others are not
     efterår.classList.remove("displayNone");
     forår.classList.add("displayNone");
     sommer.classList.add("displayNone");
@@ -133,6 +145,8 @@ function buttonEfterår() {
 }
 function buttonVinter() {
     console.log("vinter")
+
+    // adding and removing displayNone class so one element is shown and the threes others are not
     vinter.classList.remove("displayNone");
     efterår.classList.add("displayNone");
     forår.classList.add("displayNone");
