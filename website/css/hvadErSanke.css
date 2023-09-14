@@ -5,6 +5,14 @@
   background-image: linear-gradient(rgb(0, 156, 180), rgb(122, 207, 221));
 }
 
+#nr2 h2 {
+  font-family: Bubble;
+}
+
+.h3Season {
+  font-family: Bubble;
+}
+
 .HTF {
   /* background-color: rgb(187, 201, 165); */
   width: 100%;
@@ -155,4 +163,42 @@
 
 .speechBubble:nth-child(14) {
   top: 72%;
+}
+
+@media (max-width: 450px) {
+  .string {
+    display: none;
+  }
+
+  .ball {
+    display: none;
+  }
+
+  #contentHTF {
+    width: 100%;
+    height: 800px;
+    position: relative;
+  }
+
+  .speechBubble {
+    width: 100%;
+    height: 112px;
+    border-radius: 15px;
+    background-color: rgba(255, 207, 103);
+    position: absolute;
+  }
+
+  .speechBubble:nth-child(10),
+  .speechBubble:nth-child(12),
+  .speechBubble:nth-child(14) {
+    left: 0px;
+  }
+
+  .speechBubble:nth-child(11),
+  .speechBubble:nth-child(13) {
+    left: 0px;
+  }
+
+  .sbAfter::before {
+  }
 }
