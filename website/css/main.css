@@ -55,7 +55,7 @@ nav a{
 
 
 nav a:hover{
-    color: orange;
+    color: rgb(221, 214, 78);
     animation-name: pulse;
     animation-duration: 0.8s;
     animation-timing-function: ease-in-out;
